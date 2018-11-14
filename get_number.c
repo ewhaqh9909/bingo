@@ -29,7 +29,7 @@ int get_number_byCom(int com_bingo[N][N])
 {
 	int com_count,i,j,random;
 	com_count=0;
-
+	int turn=1;//turn 횟수 입력  
 	srand((int)time(NULL));
 	random=rand()%N1+1;
 	while(1)
@@ -42,7 +42,7 @@ int get_number_byCom(int com_bingo[N][N])
 				if(com_bingo[i][j]==random)
 					printf("컴퓨터가 %d를 선택했습니다.",random);
 					com_count++;
-			
+				turn++;
 			}
 		}
 	}

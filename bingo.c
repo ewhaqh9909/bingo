@@ -7,23 +7,26 @@
 #include "bingo_N.h"
 #include "print_bingo.h"
 #include "get_number.h"
+#include "process_bingo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int main(int argc, char *argv[]){
 	int bingo[N][N];
 	int com_bingo[N][N];
 	printf("게임 시작!\n\n");
-	
+	int turn=1;
 	srand((int)time(NULL));
-	
-		printf("---사용자 빙고판---\n");
 		initiate_bingo(bingo);
-		print_bingo(bingo);
-		get_number_byMe(bingo);
-		
 		initiate_bingo(com_bingo);
-		get_number_byCom(com_bingo);
-		
-	
+		printf("---사용자 빙고판---\n");
+		while(1)
+		{
+			printf("%d번째 턴입니다.\n",turn);
+			print_bingo(bingo);
+			get_number_byMe(bingo);
+			process_bingo(bingo);
+			get_number_byCom(com_bingo);
+			process_bingo(com_bingo);
+		}
 }
 
 
