@@ -6,12 +6,27 @@
 #include <time.h> //난수를 위해 
 #include "bingo_N.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int initiate_bingo(int bingo[N][N]);
 int main(int argc, char *argv[]){
+	
 	int bingo[N][N];
+	int com_bingo[N][N];
 	printf("게임 시작!\n\n");
+	srand((int)time(NULL));
+	int i,j;
+	
 	initiate_bingo(bingo);
+		for(i=0;i<N;i++)
+	{
+		for(j=0;j<N;j++)
+		{
+			printf("%3d",bingo[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+	print_bingo(bingo);
+	initiate_bingo(com_bingo);	
+	print_bingo(com_bingo);
 }
 
 
