@@ -5,7 +5,7 @@
 #define M 1
 #include <time.h> //난수를 위해 
 #include "bingo_N.h"
-
+#include "print_bingo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int main(int argc, char *argv[]){
 	int bingo[N][N];
