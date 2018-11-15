@@ -8,8 +8,9 @@ int process_bingo(int bingo[N][N],int user_num)	//사용자로 부터 입력받은 값을 -1
 {
 	int i,j;
 	int com_bingo[N][N];
-	srand((int)time(NULL));
 	int random;
+	srand((int)time(NULL));
+
 
 	for(i=0;i<N;i++)
 	{

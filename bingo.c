@@ -14,7 +14,7 @@
 int main(int argc, char *argv[]){
 	int bingo[N][N];
 	int com_bingo[N][N];
-	int user_num,real_bingo;
+	int user_num;
 	int random;
 	int turn=0; 
 	printf("게임 시작!\n\n");	
@@ -26,40 +26,46 @@ int main(int argc, char *argv[]){
 		initiate_bingo(com_bingo);
 		printf("---사용자 빙고판---\n");
 	
-	while(count_bingo(bingo)<=M&&count_bingo(com_bingo)<=M)
-	{		
+	while(count_bingo(bingo)<M&&count_bingo(com_bingo)<M)
+	{
+			
 			print_bingo(bingo);
+		
 			printf("숫자를 입력하시오.\n");
 			user_num=get_number_byMe(bingo); 
-		
 			process_bingo(bingo,user_num);
-			
-			random=	get_number_byCom(com_bingo);
-			process_bingo(com_bingo,random);
-			print_bingo(bingo);
+			process_bingo(com_bingo,user_num);
 		
+			printf("컴퓨터차례\n");
+		
+			random=get_number_byCom(com_bingo);
+			process_bingo(com_bingo,random);
+			process_bingo(bingo,random);
+			print_bingo(bingo);
 			turn++;
-			
-					
-	}
-	
-		printf("%d번 만에 승자가 나왔습니다.",turn); //빙고게임을 한 횟수를 turn으로 나타냄  
 		
 		if(count_bingo(bingo)>=M&&count_bingo(com_bingo)>=M)                                                                   
 		{
 			printf("비겼습니다.");
-		}
+		}break;
 		if(count_bingo(bingo)>=M&&count_bingo(com_bingo)<=M)
 		{
 			printf("사용자 우승.");
-		}
+		}break;
 		if(count_bingo(bingo)<=M&&count_bingo(com_bingo)>=M)
 		{
 			printf("컴퓨터 우승.");
-		 } 
-			
-		/*위의 if구문들은 count_bingo함수로부터 사용자의 값과 컴퓨터의 값의 real_bingo값이 
+		 }break;
+	/*위의 if구문들은 count_bingo함수로부터 사용자의 값과 컴퓨터의 값의 real_bingo값이 
 	 	정해진 값인 M과 비교하여 승자를 가려내는 구문이다.*/ 
+						
+		
+	}
+	
+		printf("%d번 만에 승자가 나왔습니다.",turn); //빙고게임을 한 횟수를 turn으로 나타냄  
+		
+	
+		
 			
 		
 }
