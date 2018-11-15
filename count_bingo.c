@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #define N 5
 #define N1 N*N
+#define M 1
 #include <time.h>
 int count_bingo(int bingo[N][N])
 {
@@ -44,4 +45,5 @@ int count_bingo(int bingo[N][N])
 		cross2++;
 	}
 	real_bingo=width+length+cross1+cross2;
+	return real_bingo;
 }

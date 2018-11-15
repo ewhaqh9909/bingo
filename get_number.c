@@ -2,21 +2,22 @@
 #include <stdlib.h>
 #define N 5
 #define N1 N*N
+#define M 1
 #include <time.h> //난수를 위해 
 int get_number_byMe(int bingo[N][N])
 {
-	int my_count,h,i,j;
+	int my_count,user_num,i,j;
 	my_count=0;
 	
 	while(1)
 	{
 		printf("1~%d 사이의 숫자를 입력:",N1);
-		scanf("%d",&h);
+		scanf("%d",&user_num);
 		for(i=0;i<N;i++)
 		{
 			for(j=0;j<N;j++)
 			{
-				if(bingo[i][j]==h)
+				if(bingo[i][j]==user_num)
 					my_count++;
 			
 			}
