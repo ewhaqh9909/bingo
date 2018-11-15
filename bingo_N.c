@@ -4,7 +4,7 @@
 #define N1 N*N
 #define M 1
 #include <time.h> //난수를 위해 
-int initiate_bingo(int bingo[N][N])
+int initiate_bingo(int bingo[N][N]) 	//초기의 빙고판 생성을 위한 함수 
 {
 	int i,j,ran1,ran2; 
 	int random[ran1];
