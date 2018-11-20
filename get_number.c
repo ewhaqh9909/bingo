@@ -13,21 +13,22 @@ int get_number_byMe(int bingo[N][N])	//사용자가 지정한 숫자를 입력받기 위한 함수
 	{
 		printf("1~%d 사이의 숫자를 입력:",N1);
 		scanf("%d",&user_num);
+		
 		for(i=0;i<N;i++)
 		{
 			for(j=0;j<N;j++)
 			{
 				if(bingo[i][j]==user_num)
 					my_count++;//만약 my_count가 증가가 되지 않는다는건 1~N*N사이의 숫자가 아니라는것   
-				
 			}
 		}
-		if(my_count==0||user_num==-1)	//user_num은 이미 입력되어서 -1로 바뀐 숫자 그러므로 중복및 1~N*N사이에 있는 수 만을 입력받기 위해... 
+		if(my_count==0||user_num==-1)	//user_num은 이미 입력되어서 -1로 바뀐 숫자 그러므로 중복이므로 다시 입력 받음 결국 1~N*N사이에 있는 수 만을 입력받기 위해... 
 		{
 			printf("잘못입력했습니다. 다시 입력하십시오.\n");
-		 } else
-			 break;
+		} else  
+		 break;
 	}
+		 
 	return user_num;
 }
 
