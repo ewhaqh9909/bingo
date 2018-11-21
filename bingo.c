@@ -46,15 +46,15 @@ int main(int argc, char *argv[]){
 	 
 		if(count_bingo(bingo)/*사용자 빙고수*/ >=M&&count_bingo(com_bingo)/*컴퓨터 빙고수*/>=M) //빙고수랑 M을 비교...                                                                 
 		{
-			printf("비겼습니다.");
+			printf("비겼습니다!");
 		}
 		if(count_bingo(bingo)>=M&&count_bingo(com_bingo)<=M)
 		{
-			printf("사용자 우승.");
+			printf("사용자 우승!");
 		}
 		if(count_bingo(bingo)<=M&&count_bingo(com_bingo)>=M)
 		{
-			printf("컴퓨터 우승.");
+			printf("컴퓨터 우승!");
 		 }
 	/*위의 if구문들은 count_bingo함수로부터 사용자의 값과 컴퓨터의 값의 real_bingo값이 
     정해진 값인 M과 비교하여 승자를 가려내는 구문이다.*/ 
