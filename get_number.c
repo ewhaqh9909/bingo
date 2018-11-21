@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #define N 5
 #define N1 N*N
-
-#include <time.h> //난수를 위해 
+#include <time.h> //난수를위해 
 int get_number_byMe(int bingo[N][N])	//사용자가 지정한 숫자를 입력받기 위한 함수 
 {
 	int my_count,user_num,i,j;//my_count는 빙고판에 user_num가 들어가면 수가 올라감  

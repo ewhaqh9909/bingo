@@ -10,7 +10,6 @@
 #include "process_bingo.h"
 #include "count_bingo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]){
 	int bingo[N][N];//사용자의 빙고판을 위한 배열  
 	int com_bingo[N][N];//컴퓨터의 빙고판... 
@@ -20,7 +19,7 @@ int main(int argc, char *argv[]){
 	printf("게임 시작!\n\n");	
 	
 	
-	srand((int)time(NULL));//램덤으로 숫자를 뽑기위한 난수... 
+	srand((int)time(NULL));//램덤으로 숫자를 뽑기위한 난수..
 	
 		initiate_bingo(bingo);//초기의 사용자 빙고판을 램덤으로 선정  
 		initiate_bingo(com_bingo);//초기의 컴퓨터 빙고판을 램덤으로 선정  

@@ -37,7 +37,7 @@ int count_bingo(int bingo[N][N])
 	sum=0;
 	for(i=0;i<N;i++)
 	{
-		sum+=bingo[i][i];//왼쪽위에서 오른쪽 아래로 가는 빙고수를 측정   
+		sum+=bingo[i][i];//왼쪽 위에서 오른쪽 아래로 가는 빙고수를 측정   
 		if(sum==-5)
 		{
 			bingo3++;
