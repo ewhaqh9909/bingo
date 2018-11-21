@@ -22,7 +22,7 @@ int initiate_bingo(int bingo[N][N]) 	//초기의 빙고판 생성을 위한 함수
 	for(i=0;i<N1;i++)
 	{
 		random[i]=0;
-	}//램덤배열을 우선 다 0으로 초기화  
+	}//램덤배열을  우선 다 0으로 초기화  
 	
 	for(i=0;i<N;i++)
 	{
